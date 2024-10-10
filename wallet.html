@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet Withdrawal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .wallet-container {
+            background-color: #002147;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            text-align: center;
+        }
+        .wallet-balance {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #ffcc00;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e6b800;
+        }
+        .warning-message {
+            color: red;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wallet-container">
+        <h1>Welcome, Godswill04</h1>
+        <p class="wallet-balance">Wallet Balance: $5000.00</p>
+        <button id="withdrawBtn">Withdraw</button>
+        <p id="warningMessage" class="warning-message"></p>
+    </div>
+
+    <script>
+        document.getElementById('withdrawBtn').addEventListener('click', function () {
+            // Simulate withdrawal restriction
+            const warningMessage = document.getElementById('warningMessage');
+            warningMessage.innerHTML = "You must pay $50 before withdrawing. <br> Contact the manager via <a href='https://wa.me/YOURWHATSAPPLINK' target='_blank'>WhatsApp</a> to proceed.";
+        });
+    </script>
+</body>
+</html>
